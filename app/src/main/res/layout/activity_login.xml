@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.jiujiu.question.ui.login.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_design"
+        tools:context="com.jiujiu.question.ui.login.LoginActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="64dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextAppearance.Quiz.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="60dp"
+                android:text="@string/str_login"
+                android:textAppearance="@android:style/TextAppearance.Material.Caption"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:errorEnabled="true"
+                    style="@style/Widget.Quiz.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_login_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_email"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:passwordToggleEnabled="true"
+                    app:errorEnabled="true"
+                    style="@style/Widget.Quiz.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_login_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_password"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.Quiz.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_login" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="48dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    style="@style/Button.imageButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_google_plus" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    style="@style/Button.imageButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_facebook" />
+            </LinearLayout>
+
+            <ProgressBar
+                style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:visibility="@{viewModel.isLoading ? View.VISIBLE: View.GONE}" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

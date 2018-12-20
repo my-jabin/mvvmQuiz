@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#40c4ff</color>
+    <color name="colorPrimaryDark">#0094cc</color>
+    <color name="colorAccent">#78DC96</color>
+    <color name="primaryTextColor">#f10b0202</color>
+    <color name="colorControlActivated">#70BDC6</color>
+
+    <color name="secondaryColor">#757575</color>
+    <color name="secondaryLightColor">#cacaca</color>
+
+    <color name="chipBackgroundColor">#e2e2e2</color>
+
+    <color name="fb">#3b5998</color>
+    <color name="google">#d34836</color>
+
+    <!--Design colors-->
+    <color name="red_dark">#F06423</color>
+    <color name="red_dark2">#D85A1B</color>
+    <color name="cyan_light">#c9ebee</color>
+    <color name="cyan">#b5e3e7</color>
+    <color name="cyan_dark">#70BDC6</color>
+    <color name="navy_blue">#214258</color>
+    <color name="navy_blue_dark">#1C3A4E</color>
+    <color name="light_green">#78DC96</color>
+    <color name="light_blue">#55C8F0</color>
+    <color name="yellow">#fff44f</color>
+    <color name="red">#ff0000</color>
+
+
+    "
+</resources>

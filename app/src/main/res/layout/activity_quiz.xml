@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.jiujiu.question.ui.quiz.QuizActivityViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.jiujiu.question.ui.main.QuizActivity">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                style="@style/Theme.Quiz.Toolbar" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.mindorks.placeholderview.SwipePlaceHolderView
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/swipContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.mindorks.placeholderview.SwipePlaceHolderView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/result_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="80dp"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_right_answers"
+                    style="@style/TextStyle.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/str_right_number" />
+
+                <TextView
+                    android:id="@+id/tv_wrong_answers"
+                    style="@style/TextStyle.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/str_wrong_number" />
+
+                <TextView
+                    android:id="@+id/tv_correct_rate"
+                    style="@style/TextStyle.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/correct_rate" />
+
+                <Button
+                    android:id="@+id/button_try_again"
+                    style="@style/Widget.Quiz.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="@{()-> viewModel.onTryAgainClick()}"
+                    android:text="@string/str_try_again" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE: View.GONE}" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
+

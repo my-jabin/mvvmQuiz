@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+
+        <ImageView
+            android:id="@+id/image_circle"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/circle_image"
+            android:transitionName="@string/transition_button_quiz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_question_title"
+            style="@style/TextStyle.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/image_circle"
+            app:layout_constraintEnd_toEndOf="@+id/image_circle"
+            app:layout_constraintStart_toStartOf="@+id/image_circle"
+            app:layout_constraintTop_toTopOf="@+id/image_circle"
+            tools:text="20" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            style="@style/TextStyle.TextView.SubText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/str_category" />
+
+        <TextView
+            android:id="@+id/tv_difficulty"
+            style="@style/TextStyle.TextView.SubText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category"
+            tools:text="@string/str_difficulty" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/darker_gray"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_difficulty" />
+
+        <TextView
+            android:id="@+id/tv_question"
+            style="@style/TextStyle.TextView.Question"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="16sp"
+            app:autoSizeMaxTextSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            tools:text="This is a question" />
+
+        <LinearLayout
+            android:id="@+id/layout_multiple_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_optionA"
+                style="@style/Widget.Quiz.Button.Option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:additionalPaddingLeftForIcon="-8dp"
+                app:icon="@drawable/ic_option_a"
+                app:iconTint="@color/secondaryColor"
+                tools:text="jfidjfisjfidsfjdsi" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_optionB"
+                style="@style/Widget.Quiz.Button.Option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:additionalPaddingLeftForIcon="-8dp"
+                app:icon="@drawable/ic_option_b"
+                app:iconTint="@color/secondaryColor" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_optionC"
+                style="@style/Widget.Quiz.Button.Option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:additionalPaddingLeftForIcon="-8dp"
+                app:icon="@drawable/ic_option_c"
+                app:iconTint="@color/secondaryColor" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_optionD"
+                style="@style/Widget.Quiz.Button.Option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:additionalPaddingLeftForIcon="-8dp"
+                app:icon="@drawable/ic_option_d"
+                app:iconTint="@color/secondaryColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_boolean_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_option_true"
+                style="@style/Widget.Quiz.Button.Option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_true"
+                app:additionalPaddingLeftForIcon="-8dp"
+                app:icon="@drawable/ic_option_true"
+                app:iconTint="@color/secondaryColor" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_option_false"
+                style="@style/Widget.Quiz.Button.Option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_false"
+                app:additionalPaddingLeftForIcon="-8dp"
+                app:icon="@drawable/ic_option_false"
+                app:iconTint="@color/secondaryColor" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

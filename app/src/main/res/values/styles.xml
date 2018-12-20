@@ -1,0 +1,128 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.Quiz" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorControlActivated</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+        <item name="android:fontFamily">@string/default_font</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+
+        <!--style for material dialog-->
+        
+    </style>
+
+    <style name="Theme.Quiz.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorAccent</item>
+        <item name="android:theme">@style/Theme.Quiz</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <!--Widget theme-->
+
+    <style name="Widget.Quiz.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:padding">4dp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Quiz.Button</item>
+    </style>
+
+    <style name="Widget.Quiz.Button.Option">
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Quiz.Button.Option</item>
+        <item name="backgroundTint">@color/secondaryLightColor</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="Widget.Quiz.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlineBox">
+        <item name="hintTextAppearance">@style/TextAppearance.Quiz.TextInputLayout.HintText</item>
+    </style>
+
+    <style name="Widget.Quiz.Progressbar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:progressDrawable">@drawable/progress_drawable</item>
+    </style>
+
+    <!--Text appearance-->
+    <style name="TextAppearance.Quiz.Title" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Quiz.Subtitle" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance.Quiz.Body" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Quiz.Body.Question" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Quiz.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Quiz.Button" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="TextAppearance.Quiz.Button.Option" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextStyle.TextView">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Quiz.Subtitle</item>
+    </style>
+
+    <style name="TextStyle.TextView.SubText">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Quiz.Body</item>
+    </style>
+
+    <style name="TextStyle.TextView.Question">
+        <item name="android:textAppearance">@style/TextAppearance.Quiz.Body.Question</item>
+    </style>
+
+    <style name="TextStyle.Spinner">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Quiz.Body</item>
+    </style>
+
+
+
+
+
+
+    <!-- ========  DIVIDER    ============  -->
+
+
+    <style name="Button.imageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+
+</resources>

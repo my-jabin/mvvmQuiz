@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="str_password">Password</string>
+    <string name="str_login">Login</string>
+    <string name="str_email">Email</string>
+    <string name="login_error">Please provides valid email and password</string>
+    <string name="str_category">Category</string>
+    <string name="str_difficulty">Difficulty</string>
+    <string name="str_type">Type</string>
+    <string name="str_amount">Amount</string>
+    <string name="str_start">Start Quiz</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="type_multi_choice">Multiple Choice</string>
+    <string name="type_true_false">True/False</string>
+    <string name="str_quiz">Quiz</string>
+    <string name="str_any">Any</string>
+    <string name="str_true">True</string>
+    <string name="str_false">False</string>
+    <string name="str_right_number">Right answers: %1$d</string>
+    <string name="str_wrong_number">Wrong answers: %1$d</string>
+    <string name="str_try_again">Try again</string>
+    <string name="correct_rate">Correct Rate: %1$s</string>
+    <string name="click_to_exit">Click again to exit the app</string>
+    <string name="amount_5">5</string>
+    <string name="amount_10">10</string>
+    <string name="amount_15">15</string>
+    <string name="amount_20">20</string>
+    <string name="alert_message">You have unfinished quiz. Do you want to continue?</string>
+    <string name="abort_message">Do you really want to go back? The unfinished answers will be lost. </string>
+    <string name="statistic">Statistic</string>
+    <string name="rate_me">Rate me</string>
+    <string name="title_activity_statistic">StatisticActivity</string>
+
+    <string name="str_correctness">Correctness: %1$d%%</string>
+    <string name="str_progress_text"> %1$d / %2$d</string>
+    <string name="transition_button_quiz" translatable="false">transition_button_quiz</string>
+
+    <string name="default_font" translatable="false"  >sans-serif-light</string>
+</resources>

@@ -1,0 +1,78 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.jiujiu.question.ui.statistic.StatisticActivityViewModel" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/statistic_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.jiujiu.question.ui.statistic.StatisticActivity">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.jiujiu.question.ui.main.MainActivity">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    style="@style/Theme.Quiz.Toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/statistic_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/statistic_tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabBackground="?attr/colorPrimary"
+                        app:tabIndicatorColor="?android:attr/textColorPrimary"
+                        app:tabTextColor="?android:attr/textColorPrimary"
+                        android:layout_gravity="top" />
+
+                </androidx.viewpager.widget.ViewPager>
+
+            </FrameLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|left"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/navigation_items" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>
